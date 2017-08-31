@@ -1,0 +1,12 @@
+
+public class P1 {
+	// P1 Assignment
+	// Author: Hayden Lingle
+	// Date: 8/24/2017
+	// Class: CS164
+	// Email: hlingle@cs.colostate.edu
+	
+	public static void main(String[] args) {
+		System.out.println("Java programming is great!".length);
+	}
+}

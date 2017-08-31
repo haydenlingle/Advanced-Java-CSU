@@ -1,0 +1,19 @@
+//P2 Assignment
+//Author: Hayden Lingle
+//Date: Aug 29, 2017
+//Class: CS164
+//Email: hlingle@rams.colostate.edu
+
+import java.util.Scanner;
+
+public class P2 {
+
+	public static void main(String[] args) {
+		double radius, circumference, area, volume;
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Radius? ");
+
+	}
+
+}
