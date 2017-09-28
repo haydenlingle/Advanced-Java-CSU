@@ -1,0 +1,20 @@
+//Lab9 Assignment
+//Author: Hayden Lingle
+//Date: Sep 28, 2017
+//Class: CS164
+//Email: hlingle@rams.colostate.edu
+public class Lab9 {
+	
+	public static double circleArea(double radius){
+		
+		double area = Math.PI * Math.pow(radius, 2);
+		
+		return area;
+	}
+
+	public static void main(String[] args) {
+		System.out.println(circleArea(2.0));
+
+	}
+
+}

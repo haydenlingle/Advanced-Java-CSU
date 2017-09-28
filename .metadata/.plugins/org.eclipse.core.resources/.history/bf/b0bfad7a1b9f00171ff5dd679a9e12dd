@@ -1,0 +1,70 @@
+//P5 Assignment
+//Author: Hayden Lingle
+//Date: Sep 21, 2017
+//Class: CS164
+//Email: hlingle@rams.colostate.edu
+
+
+public class P5 {
+	
+	// Method to check whether an integer is prime.
+	public static boolean isPrime(int number) {
+
+	    // DO NOT CHANGE THIS CODE!
+	    for(int i=2;i<=number/2;i++)
+	        if(number%i==0)
+	            return false;
+	    return true;
+	}
+
+	// Method to print primes in a specified range
+	public static void printPrimes(int start, int end) {
+	    for(int i = start; i <= end; i++){
+	    	if(isPrime(i)){
+	    		System.out.print(i + ", ");
+	    	}
+	    }//end for
+	    System.out.println();
+	}
+
+	// Method to remove vowels from a string
+	public static String removeVowels(String input) {
+	    
+		String finalString ="";
+	    for(int i = 0; i < input.length(); i++){
+	    	switch(input.charAt(i)){
+	    	case 'a': case 'e': case 'i': case 'o': case 'u': case 'A': case 'E': case 'I': case 'O': case 'U':
+	    		break;
+	    	default:
+	    		finalString += input.charAt(i);
+	    	}//end switch	    	
+	    }
+		return finalString;
+	}
+
+	// Method to generate and print the value of a number raised to an exponent
+	public static double evaluateExponent(double number, int exponent) {
+	    double result = 1.0;
+	    if(exponent < 0.0 + 0.0001 && exponent > 0.0 - 0.0001){
+	    	return result;
+	    }
+	    
+		// add code here
+		return result;
+	}
+
+	// Method to find and print the minimum/maximum/mean of a set of positive numbers
+	public static void computeStatistics(int sentinel) {
+	    // add code here
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		printPrimes(1, 50);
+		System.out.println(removeVowels("Hello There"));
+		
+		
+
+	}
+
+}

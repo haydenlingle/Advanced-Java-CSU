@@ -1,0 +1,23 @@
+//Lab9 Assignment
+//Author: Hayden Lingle
+//Date: Sep 28, 2017
+//Class: CS164
+//Email: hlingle@rams.colostate.edu
+public class Lab9 {
+	
+	public static double circleArea(double radius){		
+		double area = Math.PI * Math.pow(radius, 2.0);		
+		return area;
+	}
+	
+	public static double sphereVolume(double radius){
+		double volume = Math.PI * (4.0/3.0) * Math.pow(radius, 3.0);
+		return volume;
+	}
+
+	public static void main(String[] args) {
+		System.out.println(circleArea(2.0));
+
+	}
+
+}
