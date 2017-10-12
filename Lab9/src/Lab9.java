@@ -37,7 +37,7 @@ public class Lab9 {
 		System.out.println(circleArea(2.0));
 		System.out.println(sphereVolume(2.0));
 		System.out.println(round(3.488821));
-		System.out.println(reverse("HeLLo ThERe"));
+		System.out.println(reverse("ThEy DoNt CaLl U tHaT"));
 
 	}
 

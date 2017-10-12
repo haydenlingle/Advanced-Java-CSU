@@ -144,7 +144,7 @@ public class Maze implements KeyListener {
         }
 
         // Successful move
-        sleep(1000);
+        sleep(100);
         return true;
     }
 
