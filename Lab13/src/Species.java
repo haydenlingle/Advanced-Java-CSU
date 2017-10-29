@@ -1,52 +1,66 @@
 public class Species {	
 	
-	private String speciesName;
-	private int speciesPopulation, speciesGrowthRate;
+	public String speciesName;
+	public int speciesPopulation, speciesGrowthRate;
 	
     public Species(String name, int population, int growthRate){
-    	speciesName = name;
-    	speciesPopulation = population;
-    	speciesGrowthRate = growthRate;
+    	this.speciesName = name;
+    	
+    	if(population < 1){
+    		this.speciesPopulation = 1;
+    	}else if(population > 1500){
+    		this.speciesPopulation = 1500;
+    	}else{
+    		this.speciesPopulation = population;
+    	}
+    	
+    	if(growthRate < 1){
+    		this.speciesGrowthRate = 1;
+    	}else if(growthRate > 20){
+    		this.speciesGrowthRate = 20;
+    	}else{
+    		this.speciesGrowthRate = growthRate;
+    	}
+    	
     }
-	// Put the instance variable here.
-
-    // ....
-
-    // Create a Species constructor that takes in a String for its name, an int for
-    // its population, and an int for its growth rate per year as a percent.
-
-    // ....
     
     // mergeSpecies adds the populations of the two species, changes the name
     // of the species to the concatenation of the two names, and the growth
     // rate to the maximum of the two growth rates.
 
     public void mergeSpecies(Species other) {
+        String newName = this.speciesName + other.speciesName;
+        int newPop = other.speciesPopulation + this.speciesPopulation;
+        int newGrowth = Math.max(other.speciesGrowthRate, this.speciesGrowthRate);
         
-    	// ....
-        System.out.println("mergeSpecies NOT IMPLEMENTED YET");
+        System.out.println("New name: " + newName);
+        System.out.println("New population: " + newPop);
+        System.out.println("New growth rate: " + newGrowth);
+        
     }
 
     public String toString(){
-        // ....
-        System.out.println("toString NOT IMPLEMENTED YET");
-        return "";
+        return ("Name of species: " + this.speciesName + "\nPopulation: " + this.speciesPopulation + "\nGrowth Rate: " + this.speciesGrowthRate + "%");
     }
 
     // Increases the population according to the growth rate of the species, i.e.
     // updates the population instance variable by adding to it the growth rate/100 times the current population.
 
     public void grow() {
-        // ....
-        System.out.println("grow NOT IMPLEMENTED YET");
+        this.speciesPopulation += (this.speciesGrowthRate/100.0 * this.speciesPopulation);
+        System.out.println("New population: " + this.speciesPopulation);
     }
 
     // Returns the population of the species in x years according to its growth rate.
 
     public int populationInXYears(int x){
-        // ....
-        System.out.println("getPoplulationInXYears NOT IMPLEMENTED YET");
-        return 1;
+    	double newTotal = (double)this.speciesPopulation;
+    	double smallPercent = (double)this.speciesGrowthRate / 100.0;
+    	double multiplyNumber = smallPercent + 1.0;
+    	for(int i = 0; i < x; i++){
+    		newTotal *= multiplyNumber;
+    	}
+        return (int)newTotal;
     }
 
     public static void main(String[] args) {

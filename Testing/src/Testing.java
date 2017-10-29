@@ -9,8 +9,10 @@ public class Testing {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		System.out.println(21&20);
+		int[] intArray = {1, 3, 4, 5, 6, 7, 8, 9};
+		for(int i : intArray){
+			System.out.println(i);
+		}
 	}
 
 }

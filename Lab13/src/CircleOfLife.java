@@ -1,23 +1,21 @@
-public class CircleOfLife {
+import java.util.Scanner;
 
-    public static void main(String args[]) {
+public class CircleOfLife{
 
-        Species speciesObject = Species("Labrador Retriever", 4000000, 30);// Create a new Species object here, passing in the appropriate arguments
+	public static void main(String args[]) {
+		Scanner scnr = new Scanner(System.in);
+		Species sObject = new Species("Labrador Retriever", 100, 10);
+		Species sObject1 = new Species("Pug", 1200, 10);
 		
-        // Print out the species' growth rate
-
-        // Use the species' toString here
+		System.out.println(sObject);
+		sObject.mergeSpecies(sObject1);
 		
-        // Call populationInXYears here
+		int inputYears;		
+		System.out.print("Enter number of years: ");
+		inputYears = scnr.nextInt();
+		System.out.println("Total population after " + inputYears + " years: " + Math.round(sObject.populationInXYears(inputYears)));
 		
-        // Create a new Species object here, passing in the appropriate arguments
-        // using a very large number for the population (e.g. 100000000)
-
-        // Print out the species' population to make sure it is set to 1500
-
-        // Call populationInXYears here, feel free to hardcode in the int to be passed to the method
-
-        // Call mergeSpecies here. Test that mergeSpecies is doing what you expected it to
+		scnr.close();
 				
     }
 }
