@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 //Testing Assignment
 //Author: Hayden Lingle
 //Date: Oct 3, 2017
@@ -7,12 +9,18 @@
 
 public class Testing {
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int[] intArray = {1, 3, 4, 5, 6, 7, 8, 9};
-		for(int i : intArray){
-			System.out.println(i);
+	public static void rec1(int i){
+		if(i == 0)
+			System.out.println(i + " ");
+		for(int j = 0; j < 2; j++){
+			rec1(i-1);
+			rec1(i-1);
 		}
 	}
+	
+	public static void main(String[] args) {
+		rec1(1);
+	}
+	
 
 }

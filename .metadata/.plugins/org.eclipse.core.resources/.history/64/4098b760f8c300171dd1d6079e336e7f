@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+
+//Testing Assignment
+//Author: Hayden Lingle
+//Date: Oct 3, 2017
+//Class: CS164
+//Email: hlingle@rams.colostate.edu
+
+
+public class Testing {
+	
+	public static void main(String[] args) {
+		ArrayList<String> x = new ArrayList<String>();
+
+	    x.add("A");
+
+	    x.add(0, "C");
+
+	    x.add(1, "D");
+
+	    x.add(2, "F");
+	    x.add(4, "G");
+	  
+	  
+	  System.out.println(x.size());
+	}
+
+}

@@ -1,0 +1,4 @@
+while (lineScan.hasNext()) {
+String token = lineScan.next();
+count++;
+}
