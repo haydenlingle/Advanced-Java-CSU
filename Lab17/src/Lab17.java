@@ -51,7 +51,19 @@ public class Lab17 implements IR17 {
 
 	@Override
 	public int sequence3(int n) {
-		// TODO Auto-generated method stub
+		if(n == 1 || n == 2 || n == 0){
+			switch(n){
+			case 1: 
+				return 2;
+			case 2: 
+				return 7;
+			case 0: 
+				return 1;
+			}
+		}else{
+			return (2 * sequence3(n-1) + 3 * sequence3(n-2));
+		}
+		
 		return 0;
 	}
 
