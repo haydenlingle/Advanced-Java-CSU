@@ -1,0 +1,13 @@
+//P12 Assignment
+//Author: Hayden Lingle
+//Date: Nov 26, 2017
+//Class: CS164
+//Email: hlingle@rams.colostate.edu
+public class Maze implements IMaze{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
