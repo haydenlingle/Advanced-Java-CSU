@@ -1,4 +1,8 @@
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 //Testing Assignment
 //Author: Hayden Lingle
@@ -9,17 +13,34 @@ import java.util.ArrayList;
 
 public class Testing {
 	
-	public static void rec1(int i){
-		if(i == 0)
-			System.out.println(i + " ");
-		for(int j = 0; j < 2; j++){
-			rec1(i-1);
-			rec1(i-1);
-		}
-	}
 	
 	public static void main(String[] args) {
-		rec1(1);
+		ArrayList<Integer> iList = new ArrayList<Integer>(10);
+		System.out.println(iList.size());
+		iList.add(3);
+		iList.add(4);
+		iList.remove(0);
+		iList.add(5);
+		System.out.println(iList.toString());
+	
+//		try{
+//			Scanner fileScnr = new Scanner(new File("input.txt"));
+//			String line;
+//			while (fileScnr.hasNextLine()){
+//				line = fileScnr.nextLine();
+//				Scanner lineScnr = new Scanner(line);
+//				while(lineScnr.hasNext()){
+//					System.out.println(lineScnr.next());
+//				}
+//			}
+//			
+//			PrintWriter writer = new PrintWriter(new File("output.txt"));
+//			writer.print("Hello");
+//		}catch(IOException e){
+//			System.out.println("error: " + e);
+//		}
+	
+		
 	}
 	
 
