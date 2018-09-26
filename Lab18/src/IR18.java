@@ -7,6 +7,7 @@
 public interface IR18 {
 
 //adding a line of text to test Github Desktop
+//nother test
 /*		Method: starString
  		Precondition: x >= 1 (does not need to be checked)
 		Postcondition: returns String containing x number of '*'s
